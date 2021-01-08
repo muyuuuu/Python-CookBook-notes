@@ -79,5 +79,3 @@ print(p1)
 tech_names = {'AAPL', 'IBM', 'HPQ', 'MSFT'}
 p2 = dict((key, value) for key, value in prices.items() if key in tech_names)
 print(p2)
-
-# 

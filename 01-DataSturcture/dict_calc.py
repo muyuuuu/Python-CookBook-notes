@@ -21,7 +21,7 @@ prices = {
     'FB': 10.75
 }
 
-# 只返回键
+# 按键排序
 print(min(prices))
 print(max(prices))
 
@@ -55,7 +55,7 @@ print(a.items() & b.items())
 
 # 创建一个新字典
 c = {key:a[key] for key in (a.keys() & b.keys()) - {'z', 'w'}}
-print(c)    
+print(c)
 
 
 # 取字典元素的最小值

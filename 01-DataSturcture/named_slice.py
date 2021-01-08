@@ -28,6 +28,7 @@ print(a.start, a.step, a.stop)
 
 
 # 提前命名，并按名层访问序列
+# 第一个参数是类名
 Subscriber = namedtuple('people', ['addr', 'joined'])
 sub = Subscriber('jonesy@example.com', '2012-10-19')
 print(sub.addr, sub.joined)
@@ -42,7 +43,7 @@ records = [
     ['e', 12, 12],
 ]
 
-Stock = namedtuple('Stock', ['name', 'shares', 'price'])
+Stock = namedtuple('record', ['name', 'shares', 'price'])
 
 def compute_cost(records):
     total = 0.0

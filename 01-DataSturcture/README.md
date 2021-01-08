@@ -1,0 +1,13 @@
+1. `anyobj_sort.py`：一个类多个属性，按属性排序
+2. `dict_add_element.py`：字典添加元素，有序、无序、去重
+3. `dict_calc.py`：字典交并补，按键、值取最小值和最大值
+4. `dict_merge.py`：`ChainMap`合并字典
+5. `dict_sort.py`：`OrderedDict`保留字典插入元素的顺序，字典排序，一个`key`或多个`key`。
+6. `element_count.py`：序列中的元素计数
+7. `N_element.py`：队列，保留数据中最大、最小的`N`个元素，适用于复杂数据。
+8. `named_slice`：切片访问，可读性，不用修改下标
+9. `priority_queue`：优先级队列
+10. `record_group`：将记录按某标志分组
+11. `seq_filter`：元素过滤
+12. `seq_merge`：有序序列合并
+13. `seq_slice`：序列分解，接收多个变量

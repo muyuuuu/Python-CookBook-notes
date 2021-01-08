@@ -31,9 +31,9 @@ print(sorted(users, key=attrgetter('user_id')))
 # 多属性的排序
 print(sorted(users, key=attrgetter('name', 'user_id')))
 
-# 最大值
+# 最小值
 a = min(users, key=attrgetter('user_id'))
 print(a.user_id, a.name)
 
-# 最小值
+# 最大值
 print(max(users, key=attrgetter('user_id')))
