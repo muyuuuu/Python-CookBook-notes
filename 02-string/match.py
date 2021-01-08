@@ -45,5 +45,5 @@ print(s)
 # 删除指定字符串
 t = '-----hello====='
 t.lstrip('-')
-a = t.strip('-=.')
+a = t.strip('-=')
 print(a)
