@@ -92,4 +92,3 @@ points.sort(key=partial(distance, center))
 print(points)
 # 等价
 points.sort(key=lambda p: distance(center, p))
-

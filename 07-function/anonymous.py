@@ -10,6 +10,7 @@ Copyright 2020 - 2020 NCST, NCST
 -----------
 @ 佛祖保佑，永无BUG--
 '''
+import math
 
 # 匿名函数
 # 冒号前是参数，冒号后是返回的结果
@@ -39,3 +40,15 @@ x = 20
 b = lambda y, x=x: x + y
 print(a(10))
 print(b(10))
+
+# 多个数值的比较并排序
+center = (4.2, 6.7)
+points = [ (1, 2), (3, 4), (5, 6), (7, 8) ]
+
+def distance(p1, p2):
+    x1, y1 = p1
+    x2, y2 = p2
+    return math.hypot(x2 - x1, y2 - y1)
+
+points.sort(key=lambda p: distance(center, p))
+print(points)

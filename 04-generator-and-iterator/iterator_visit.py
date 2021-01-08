@@ -116,4 +116,3 @@ for x in flatten(items):
 items = ['Dave', 'Paula', ['Thomas', 'Lewis']]
 for x in flatten(items):
     print(x)
-
