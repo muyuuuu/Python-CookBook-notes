@@ -35,16 +35,16 @@ for x in islice(c, 10, 20):
 
 
 # 跳过可迭代对象的开始部分
-with open('/etc/passwd') as f:
-    # 去掉文件头部的行
-    for line in dropwhile(lambda line: not line.startswith('#'), f):
-    # 如下的写法会去掉注释行
-    # lines = (line for line in f if not line.startswith('#'))
-        print(line, end='')
+# with open('/etc/passwd') as f:
+#     # 去掉文件头部的行
+#     for line in dropwhile(lambda line: not line.startswith('#'), f):
+#     # 如下的写法会去掉注释行
+#     # lines = (line for line in f if not line.startswith('#'))
+#         print(line, end='')
 
 
 # 跳过指定位置的元素
-items = ['a', 'b', 'c', 1, 4, 10, 15]
+items = ['a', 'b', 'c', 1, 2, 4, 10, 15]
 # [3:] 和 [:3]
 for x in islice(items, 3, None):
     print(x)
@@ -57,16 +57,20 @@ items = ['a', 'b', 'c']
 
 # 全部的排列组合
 for p in permutations(items):
-    print(p)
+    print(p,)
+print('--------')
 # 指定数量的排列组合
 for p in permutations(items, 2):
     print(p)
+print('--------')
 # 去除元素相同的排列组合（不考虑顺序）
 for i in combinations(items, 2):
     print(i)
+print('--------')
 # 元素被选取就会从候选中剔除掉, 就不会再考虑它
 for c in combinations_with_replacement(items, 3):
     print(c)
+print('--------')
 # 负责的迭代可以参考 itertools
 
 
@@ -112,7 +116,8 @@ def flatten(items, ignore_types=(str, bytes)):
 items = [1, 2, [3, 4, [5, 6], 7], 8]
 # Produces 1 2 3 4 5 6 7 8
 for x in flatten(items):
-    print(x)
+    # sep=':' 不行，只有一个输出
+    print(x, end=', ')
 items = ['Dave', 'Paula', ['Thomas', 'Lewis']]
 for x in flatten(items):
     print(x)

@@ -18,28 +18,24 @@ from collections import deque
 class linehistory:
     def __init__(self, lines, histlen=3):
         self.lines = lines
-        self.history = deque(maxlen=histlen)
 
     def __iter__(self):
         # 索引从 1 开始
         for lineno, line in enumerate(self.lines, 1):
-            self.history.append((lineno, line))
-            yield line
-
-    def clear(self):
-        self.history.clear()
+            yield lineno, line
 
 
 # 创建一个实例对象，可以访问内部属性值
 # 如果你在迭代操作时不使用for循环语句，那么你得先调用 iter() 函数
-with open('demo.py') as f:
+with open('demo.py', encoding='utf-8') as f:
     lines = linehistory(f)
-    for line in lines:
-        for lineno, hline in lines.history:
-            print('{}:{}'.format(lineno, hline), end='')
+    for lineno, line in lines:
+        print(lineno, ': ', line, end='')
+        # for lineno, hline in lines.history:
+            # print('{}:{}'.format(lineno, hline), end='')
 
 
-f = open('demo.py')
+f = open('demo.py', encoding='utf-8')
 lines = linehistory(f)
 t = iter(lines)
 print(next(t))
